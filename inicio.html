@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Script fontawesome-->
+    <script src="https://kit.fontawesome.com/87116d5df4.js" crossorigin="anonymous"></script>
+
+    <!--Script index.JS-->
+    <script src="./js/productos.js"></script>
+    <script src="./js/index.js" defer></script>
+    <!--LINK CSS-->
+    <link rel="stylesheet" href="css/hola.css">
+
+    <link rel="icon" href="IMG/logo-robot.png">
+
+    <!--LINK Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" 
+    rel="stylesheet" 
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" 
+    crossorigin="anonymous">
+    
+    <!--LINK OwlCarousel-->
+    <link rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" 
+    integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" 
+    crossorigin="anonymous" 
+    referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" 
+    integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" 
+    crossorigin="anonymous" 
+    referrerpolicy="no-referrer" />
+
+
+    <title>Inicio | FiguShop</title>
+</head>
+<body>
+
+<!--Aqui Inicia La Navbar!!!-->
+          <nav class="navbar sticky-top navbar-expand-lg bg-body-tertiary p-3">
+          <!--logo:FiguShop-->
+            <div class="container-fluid">
+              <a class="navbar-brand" href="inicio.html"><img src="IMG/logo.png" width="250px" alt="Logo"></a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <!--Contenido de navbar 
+                  "categorias, Marcas, Ofertas, Stock, etc..."-->
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item dropdown"><!--categorias-->
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Categorias
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Series/Peliculas</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="#">Video Juegos</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="#">Anime</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item dropdown"><!--marcas-->
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Marcas
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="shf.html">Sh figuarts</a></li>
+                      <li><a class="dropdown-item" href="#">Mafex</a></li>
+                      <li><a class="dropdown-item" href="#">Figma</a></li>
+                      <li><a class="dropdown-item" href="#">Marvel legends</a></li>
+                      <li><a class="dropdown-item" href="#">Revoltech</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item"><!--Ofertas-->
+                    <a class="nav-link" href="#">Ofertas</a>
+                  </li>
+                  <li class="nav-item"><!--Preventas-->
+                    <a class="nav-link" href="#">Preventas</a>
+                  </li>
+                  <li class="nav-item"><!--Stock-->
+                    <a class="nav-link" href="#">Stock</a>
+                  </li>
+                </ul>
+                <!--Barra de busqueda!!!-->
+                <form class="d-flex justify-content-center " role="search">
+                  <input class="form-control me-2 rounded-pill flex-grow-5" type="search" placeholder="Busqueda de catalogo" aria-label="Search">
+                  <button class="btn btn-outline-primary" type="submit">Buscar</button>
+                </form>
+                <div class="me-5"></div>
+                <div class="d-flex justify-content-end my-3 py-2">
+                  <a class="mr-3 link-offset-2 link-underline link-underline-opacity-0" href="registro.html"><i class="fa-solid fa-user" style="font-size: 30px;"></i> inicio de sesión</a><!-- Usuario -->
+                  <div class="me-4"></div> <!-- Espacio en blanco -->
+                  <a id="cart-link" class="link-offset-2 link-underline link-underline-opacity-0" href="#"><i class="fa-solid fa-cart-shopping " style="font-size: 30px;"></i> Carro</a><!-- Carro de compras -->
+                </div>
+                <div class="me-2"></div>                
+              </div>
+            </div>
+          </nav>
+<!--Aqui Termina la Navbar!!!-->
+
+
+    <!--Aqui empieza el main-->
+    <main>
+      <!--carrusel de imgs-->
+      <div id="carouselExampleInterval" class="carousel slide carousel-fade" data-bs-ride="carousel">
+        <div class="carousel-indicators mb-0"><!--botones de abajo-->
+          <button type="button" data-bs-target="#carouselExampleInterval" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleInterval" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleInterval" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="5000"><!--imagenes y tiempo de el carrusel-->
+            <img src="IMG/Bandai.jpg" class="d-block w-100" alt="Bandai">
+          </div>
+          <div class="carousel-item" data-bs-interval="4000">
+            <img src="IMG/figma_Link_Tears_of_the_Kingdom.jpg" class="d-block w-100" alt="Link_figma">
+          </div>
+          <div class="carousel-item">
+            <img src="IMG/MAFEX_Spider_Man_2099.jpg" class="d-block w-100" alt="Spider-man_2099">
+          </div>
+        </div>
+        <!--botones de la parte izquierda y derecha del carrusel-->
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      <!--fin carrusel imgs-->
+
+      <!--Aqui empieza lo de las franquicias destacadas-->
+
+      <div class="container">
+         <h1 class="dysplay-3 text-center my-5">Franquicias destacadas</h1>
+         <!--Aqui empieza un owlcarousel carrusel de imgs-->
+         <div class="row">
+           <div class="owl-carousel owl-theme">
+
+             <!--item Marvel-->
+             <div class="item">
+               <div class="card border border-0">
+                 <div class="card-body">
+                   <img src="IMG/logomarvel.png" alt="Marvel" class="card-img-top" width="150px">
+                 </div>
+               </div>
+             </div> 
+
+             <!--item DBZ-->
+             <div class="item">
+              <div class="card border border-0">
+                <div class="card-body">
+                  <img src="IMG/logodbz.png" alt="" class="card-img-top" width="150px">
+                </div>
+              </div>
+            </div>
+            
+            <!--item DC-->
+            <div class="item">
+              <div class="card border border-0">
+                <div class="card-body">
+                  <img src="IMG/logodccomics.png" alt="" class="card-img-top" width="150px">
+                </div>
+              </div>
+            </div>
+            
+            <!--item naruto-->
+            <div class="item">
+              <div class="card border border-0">
+                <div class="card-body">
+                  <img src="IMG/narutologo.png" alt="" class="card-img-top" width="150px">
+                </div>
+              </div>
+            </div>
+
+
+           </div>
+         </div>
+      </div>
+      <!--Final del OwlCarousel-->
+
+      <!--Aqui empieza las marcas-->
+      <div class="container">
+        <div class="image-grid">
+
+          <!--Imagen grande-->
+          <img class="image-grid-col-2 image-grid-row-2" src="IMG/bannermarvel1.jpg" alt="Marvel">
+
+          <!--imagenes pequeñas-->
+          <img class="imagen" src="IMG/bannermcfarlane.jpg" alt="">
+          <img src="IMG/BANNERSH.png" alt="">
+          <img src="IMG/bannerstarwars.jpg" alt="">
+          <img src="IMG/Nuevosarribos.png" alt="">
+        </div>
+      </div>
+      <!--Final de seccion de marcas-->
+
+      <!--cards de productos mas vendidos-->
+      <div class="container mt-5 py-5">
+        <h1 class="text-center">Los mas vendidos</h1>
+        <div id="productos-container"  class="row">
+
+        </div>
+      </div>
+      <!--final de cards-->
+
+      <!--Carrusel de productos-->
+      <div class="container">
+        <h1 class="dysplay-3 text-center my-5 titulo-mas-vendidos">Los mas vendidos</h1>
+        <div class="row">
+          <div class="owl-carousel owl-theme carousel-container">
+
+            <!--Inicio de Item/Card-->
+            <div class="item">
+              <div class="card h-100">
+                <div class="imagen-content">
+                  <span class="discount">-16%</span> <span class="estado">PRE-VENTA</span><!--etiquetas de cards-->
+                  <img src="IMG/mafex-no-spider-man-spider-man-2099-comic-ver-medicom-toy-.jpg" class="card-img-top" alt="..."> <!--imagen del producto-->
+                </div>  
+                  <div class="card-body">
+                    <h5 class="card-title"> MAFEX (No. 239): Spider-Man - Spider-Man 2099 (Comic Ver.) [Medicom Toy]</h5><!--nombre del producto-->
+                  </div>
+                  <div class="d-flex justify-content-around mb-2 precio">
+                    <h3 class="text-danger">$74,990 
+                      <span class="text-primary  precio-original" style="text-decoration: line-through; font-size:medium;">$89,990</span></h3><!--Precio-->
+                  </div>
+                  <div class="d-flex justify-content-center mb-2">
+                    <button class="btn btn-success addToCartBtn" data-name="MAFEX (No. 239): Spider-Man 2099 (Comic Ver.)" data-price="74990">Reserva aquí</button><!--boton de compra-->
+                  </div>
+              </div>
+            </div>
+            <!--Fin de Item/Card-->
+
+            <div class="item">
+              <div class="card h-100">
+                <img src="IMG/bring-arts-final-fantasy-xvi-clive-rosfield-square-enix-.jpg" class="card-img-top" alt="...">
+                <div class="card-body ">
+                  <h5 class="card-title"> MAFEX (No. 239): Spider-Man - Spider-Man 2099 (Comic Ver.) [Medicom Toy]</h5>
+                </div>
+                <div class="d-flex justify-content-around mb-2">
+                  <h3 class="text-primary">$89,990</h3>
+                </div>
+                <div class="d-flex justify-content-center mb-2">
+                  <button class="btn btn-success">Reserva aquí</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="item">
+              <div class="card h-100">
+                <img src="IMG/figma-626-the-legend-of-zelda-tears-of-the-kingdom-link-tears-of-the-kingdom-ver-max-factory-.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title"> MAFEX (No. 239): Spider-Man - Spider-Man 2099 (Comic Ver.) [Medicom Toy]</h5>
+                </div>
+                <div class="d-flex justify-content-center mb-2">
+                  <h3 class="text-primary">$54,990</h3>
+                </div>
+                <div class="d-flex justify-content-center mb-2">
+                  <button class="btn btn-success">Reserva aquí</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="item">
+              <div class="card h-100">
+                <img src="IMG/shfiguarts-uchiha-itachi-narutop99-edition-ver-bandai-spirits-.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title"> S.H.FIGUARTS: Naruto Shippuuden - Uchiha Itachi (NARUTOP99 Edition Ver.) [Bandai Spirits]</h5>
+                </div>
+                <div class="d-flex justify-content-center mb-2">
+                  <h3 class="text-primary">$62,990</h3>
+                </div>
+                <div class="d-flex justify-content-center mb-2">
+                  <button class="btn btn-success">Reserva aquí</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="item">
+              <div class="card h-100">
+                <img src="IMG/shfiguarts-naruto-shippuuden-naruto-sage-mode-savior-of-konoha-limited-edition-bandai-spirits-.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title"> S.H.FIGUARTS: Naruto Shippuuden - Uzumaki Naruto - Sage Mode, Savior of Konoha (Limited Edition) [Bandai Spirits]</h5>
+                </div>
+                <div class="d-flex justify-content-center mb-2">
+                  <h3 class="text-primary">$76,990</h3>
+                </div>
+                <div class="d-flex justify-content-center mb-2">
+                  <button class="btn btn-success">Reserva aquí</button>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>                    
+      </div>
+      <!--fin de owlcarousel de productos-->
+
+      <!--inicio de categorias-->
+      <div class="container mt-5">
+        <h1 class="dysplay-3 text-center my-5">Categorias populares</h1>
+        <div class="row">
+          <div class="col-lg-4 mb-4 order-lg-2">
+            <div class="bg-light p-3 text-center img-container">
+              <span class="tipo-categoria">Video Juegos <i class="fa-solid fa-arrow-right"></i></span>
+              <img src="IMG/mario.jpg" alt="" class="card-img-top img-fluid">
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-4 order-1 order-lg-2">
+            <div class="bg-light p-3 text-center img-container">
+              <span class="tipo-categoria">Anime <i class="fa-solid fa-arrow-right"></i></span>
+              <img src="IMG/840_560.jpeg" alt="" class="card-img-top img-fluid">
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-4 order-1 order-lg-2">
+            <div class="bg-light p-3 text-center img-container">
+              <span class="tipo-categoria">Series/Peliculas <i class="fa-solid fa-arrow-right"></i></span>
+              <img src="IMG/pexels-tima-miroshnichenko-5662857.jpg" alt="" class="card-img-top img-fluid">
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--final de categorias-->
+
+      <!--Inicio Ofertas-->
+      <div class="container">
+        <h1 class="dysplay-3 text-center my-5 titulo-ofertas">Ofertas</h1>
+        <div class="row">
+          <div class="owl-carousel owl-theme carousel-container">
+
+            <!--inicio item-->
+            <div class="item">
+              <div class="card h-100">
+                <div class="imagen-content">
+                  <span class="discount">-16%</span> <span class="estado">PRE-VENTA</span><!--etiquetas de cards-->
+                  <img src="IMG/mafex-no-spider-man-spider-man-2099-comic-ver-medicom-toy-.jpg" class="card-img-top" alt="..."> <!--imagen del producto-->
+                </div>  
+                  <div class="card-body">
+                    <h5 class="card-title"> MAFEX (No. 239): Spider-Man - Spider-Man 2099 (Comic Ver.) [Medicom Toy]</h5><!--nombre del producto-->
+                  </div>
+                  <div class="d-flex justify-content-around mb-2 precio">
+                    <h3 class="text-danger">$74,990 
+                      <span class="text-primary  precio-original" style="text-decoration: line-through; font-size:medium;">$89,990</span></h3><!--Precio-->
+                  </div>
+                  <div class="d-flex justify-content-center mb-2">
+                    <button class="btn btn-success">Reserva aquí</button><!--boton de compra-->
+                  </div>
+              </div>
+            </div>
+
+            
+
+          </div>
+        </div>
+      </div>  
+    </main>
+
+
+    <!-- Footer -->
+<footer class="text-center text-lg-start bg-body-tertiary text-muted mt-5">
+  <!-- Section: Social media -->
+  <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+    <!-- Left -->
+    <div class="me-5 d-none d-lg-block">
+      <span>Conéctate con nosotros en nuestras redes sociales:</span>
+    </div>
+    <!-- Left -->
+
+    <!-- Right -->
+    <div>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-twitter"></i>
+      </a>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-google"></i>
+      </a>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <!-- Right -->
+  </section>
+  <!-- Section: Social media -->
+
+  <!-- Section: Links  -->
+  <section class="">
+    <div class="container text-center text-md-start mt-5">
+      <!-- Grid row -->
+      <div class="row mt-3">
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+          <!-- Content -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            <a href="inicio.html"><img src="IMG/logo.png" alt="logo" width="150px"></a>
+          </h6>
+          <p>
+            Encuentra tus figuras de colección favoritas en nuestra
+             tienda en línea, donde ofrecemos una amplia selección 
+             que incluye desde personajes del anime hasta legendarios 
+             íconos del cine y la cultura pop.
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            Productos en:
+          </h6>
+          <p>
+            <a href="#!" class="text-reset">Stock</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Preventas</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Ofertas</a>
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            Informacion (proximamente)
+          </h6>
+          <p>
+            <a href="#!" class="text-reset">Pagos</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Envios</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Preventas</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Preguntas frecuentes</a>
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">Contacto</h6>
+          <p><i class="fas fa-home me-3"></i> Santiago, Renca, CL</p>
+          <p>
+            <i class="fas fa-envelope me-3"></i>
+            marc.tapiap@duocuc.cl
+          </p>
+          <p><i class="fas fa-phone me-3"></i> +569 5555 4444</p>
+        </div>
+        <!-- Grid column -->
+      </div>
+      <!-- Grid row -->
+    </div>
+  </section>
+  <!-- Section: Links  -->
+
+  <!-- Copyright -->
+  <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+    © 2024 Copyright:
+    <a class="text-reset fw-bold" href="">Marcos Tapia</a>
+  </div>
+  <!-- Copyright -->
+</footer>
+<!-- Footer -->
+
+
+<div id="cart" style="display: none;">
+  <ul id="cart-items"></ul>
+  <div id="cart-total"></div>
+  <button onclick="clearCart()">Limpiar Carro</button>
+</div>
+
+    <!--Bootstrap JavaScript!!!-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" 
+    crossorigin="anonymous"></script>
+
+    <!--JQUERY CDN LINK.
+      IMPORTANTE INTEGRITY QUE HACE QUE NO FUNCIONE EL OWLCAROUSEL:
+      integrity="sha512-qFOQ9YFAeGj1gDOuUD61g3D+tLDv3u1ECYWqT82WQoaWrOhAY+5mRMTTVsQdWutbA5FORCnkEPEgU0OF8IzGvA=="-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" 
+   crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+    <!--owlcarousel Script LIBRARY!!!-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" 
+    integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+    <!--Cantidad de items en pantalla(responsive)
+    tambien esta la funcion de autoplay(para que se mueva soloxd)-->
+    <script>
+      $('.owl-carousel').owlCarousel({
+    loop:true,
+    margin:10,
+    nav:true,
+    autoplay:true,
+    autoplayTimeout:2750,
+    autoplayHoverPause:false,
+    responsive:{
+        0:{
+            items:2
+        },
+        600:{
+            items:3
+        },
+        1000:{
+            items:5
+        }
+    }
+})
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,173 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*aqui va lo de el grid de las marcas*/
+.image-grid {
+    --gap: 16px;
+    --num-cols: 4;
+    --row-height: 300px;
+    --row-width: 300px;
+
+    box-sizing: border-box;
+    padding: var(--gap);
+
+    display: grid;
+    grid-template-columns: repeat(var(--num-cols), 1fr);
+    grid-auto-rows: var(--row-height);
+    gap: var(--gap);
+}
+
+.image-grid > img {
+    width: 100%;
+    height: auto; /* Ajustamos la altura automáticamente para mantener la relación de aspecto */
+    object-fit: contain; /* Mantenemos la imagen completa dentro del contenedor sin distorsión */
+}
+
+.image-grid-col-2 {
+    grid-column: span 2;
+}
+
+.image-grid-row-2 {
+    grid-row: span 2;
+}
+
+@media screen and (max-width: 1024px) {
+    .image-grid {
+        --num-cols: 2;
+        --row-height: auto; /* Ajustamos la altura automáticamente según el contenido */
+        --row-width: calc(50% - var(--gap) / 2); /* Ancho igual al 50% del contenedor menos la mitad del espacio entre las columnas */
+        --gap: 8px; /* Reducimos el espacio entre las imágenes */
+    }
+
+    .image-grid > img {
+        width: 100%;
+        height: auto; /* Ajustamos la altura automáticamente para mantener la relación de aspecto */
+        object-fit: contain; /* Mantenemos la imagen completa dentro del contenedor sin distorsión */
+    }
+}
+/*animacion scala*/
+
+/*aqui termina el grid de las marcas*/
+
+.card-title {
+    display: -webkit-box; /* Para navegadores WebKit */
+    -webkit-box-orient: vertical; /* Dirección vertical */
+    overflow: hidden; /* Ocultar el exceso de texto */
+    -webkit-line-clamp: 3; /* Número de líneas que deseas mostrar */
+    line-clamp: 3; /* Número de líneas que deseas mostrar */
+    font-size: 16px; /* Tamaño de fuente base */
+}
+
+/* Haz que el texto sea más pequeño en dispositivos móviles */
+@media screen and (max-width: 768px) {
+    .card-title {
+        font-size: 4vw; /* Tamaño de fuente relativo al ancho de la pantalla */
+    }
+}
+
+
+
+/*Descuento de producto*/
+.imagen-content .discount{
+    position: absolute;
+    left: 0;
+    background-color: crimson;
+    color: #fff;
+    padding: 2px 1.2rem;
+    border-radius: 0px 16px 16px 0px;
+    font-size: 14px;
+    margin: 5% 0px 0px 0px;
+}
+
+
+/*Estado del producto (preventa/stock/out of stock)*/
+.imagen-content .estado{
+    position: absolute;
+    right: 0;
+    background-color:cornflowerblue;
+    color: #fff;
+    padding: 2px 1.2rem;
+    border-radius:  16px 0px 0px 16px;
+    font-size: 14px;
+    margin: 75% 0px 0px 0px;
+}
+
+/* Estilos para dispositivos móviles y tabletas */
+@media only screen and (max-width: 1199px) {
+    .img-container {
+        height: auto; /* Altura automática para las imágenes en móvil y tableta */
+        display: flex;
+        flex-wrap: wrap;
+    }
+  
+    .img-container img {
+        width: 100%;
+        height: auto; /* Altura automática para mantener la proporción */
+        object-fit: cover;
+    }
+  
+    .img-container:first-child {
+        width: 100%; /* La primera imagen ocupa dos columnas */
+    }
+  
+    .img-container:nth-child(2),
+    .img-container:nth-child(3) {
+        width: 50%; /* Las otras dos imágenes ocupan una columna cada una */
+    }
+}
+
+/* Estilos para escritorio */
+@media only screen and (min-width: 1200px) {
+    .img-container {
+        height: auto; /* Altura automática para las imágenes en escritorio */
+        display: flex;
+        justify-content: space-between; /* Distribuye uniformemente las imágenes */
+        align-items: center; /* Centra verticalmente las imágenes */
+    }
+  
+    .img-container img {
+        width: auto; /* Ajusta el ancho de las imágenes en el escritorio */
+        height: auto;
+        object-fit: cover;
+        max-height: 300px; /* Altura máxima para todas las imágenes en el modo de escritorio */
+    }
+}
+
+.img-container .tipo-categoria {
+    position: absolute;
+    background-color: crimson;
+    color: #ffffffa2;
+    padding: 2px 1.2rem;
+    border-top: 2px solid;
+    border-right: 2px solid;
+    border-bottom: 2px solid;
+    border-radius: 0px 16px 16px 0px;
+    border-color: #ffffffa2;
+    font-size: 14px;
+    margin-top: 0%;
+    transition: color 0.25s, border 0.25s;
+}
+
+.img-container .tipo-categoria i {
+    transition: transform 0.3s;
+}
+
+.img-container:hover .tipo-categoria i {
+    transform: translateX(5px);
+}
+
+.img-container:hover .tipo-categoria {
+    color: #fff;
+    border-color: #fff;
+}
+
+/*Precio de descuento!!*/
+.precio-original sapn{
+    text-decoration: line-through;
+}
+
+
