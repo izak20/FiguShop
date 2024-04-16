@@ -32,7 +32,7 @@
   crossorigin="anonymous" 
   referrerpolicy="no-referrer" />
 
-  <title>Sh.Figuarts | FiguShop</title>
+  <title>Todos los productos | FiguShop</title>
 </head>
 <body>
 <!--Aqui Inicia La Navbar!!!-->
@@ -52,11 +52,11 @@
               Categorias
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Series/Peliculas</a></li>
+              <li><a class="dropdown-item" href="series-peliculas.html">Series/Peliculas</a></li>
               <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#">Video Juegos</a></li>
+              <li><a class="dropdown-item" href="videojuegos.html">VideoJuegos</a></li>
               <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#">Anime</a></li>
+              <li><a class="dropdown-item" href="anime.html">Anime</a></li>
             </ul>
           </li>
           <li class="nav-item dropdown"><!--marcas-->
@@ -65,20 +65,20 @@
             </a>
             <ul class="dropdown-menu">
               <li><a class="dropdown-item" href="shf.html">Sh figuarts</a></li>
-              <li><a class="dropdown-item" href="#">Mafex</a></li>
-              <li><a class="dropdown-item" href="#">Figma</a></li>
-              <li><a class="dropdown-item" href="#">Marvel legends</a></li>
-              <li><a class="dropdown-item" href="#">Revoltech</a></li>
+              <li><a class="dropdown-item" href="mafex.html">Mafex</a></li>
+              <li><a class="dropdown-item" href="figma.html">Figma</a></li>
+              <li><a class="dropdown-item" href="ml.html">Marvel legends</a></li>
+              <li><a class="dropdown-item" href="revoltech.html">Revoltech</a></li>
             </ul>
           </li>
           <li class="nav-item"><!--Ofertas-->
-            <a class="nav-link" href="#">Ofertas</a>
+            <a class="nav-link" href="ofertas.html">Ofertas</a>
           </li>
           <li class="nav-item"><!--Preventas-->
-            <a class="nav-link" href="#">Preventas</a>
+            <a class="nav-link" href="preventas.html">Preventas</a>
           </li>
           <li class="nav-item"><!--Stock-->
-            <a class="nav-link" href="#">Stock</a>
+            <a class="nav-link" href="stock.html">Stock</a>
           </li>
         </ul>
         <!--Barra de busqueda!!!-->
@@ -88,9 +88,9 @@
         </form>
         <div class="me-5"></div>
         <div class="d-flex justify-content-end my-3 py-2">
-          <a class="mr-3 link-offset-2 link-underline link-underline-opacity-0" href="#"><i class="fa-solid fa-user" style="font-size: 30px;"></i> inicio de sesión</a><!-- Usuario -->
+          <a class="mr-3 link-offset-2 link-underline link-underline-opacity-0" href="registro.html"><i class="fa-solid fa-user" style="font-size: 30px;"></i> inicio de sesión</a><!-- Usuario -->
           <div class="me-4"></div> <!-- Espacio en blanco -->
-          <a class="link-offset-2 link-underline link-underline-opacity-0" href="#"><i class="fa-solid fa-cart-shopping " style="font-size: 30px;"></i> Carro</a><!-- Carro de compras -->
+          <a class="link-offset-2 link-underline link-underline-opacity-0" href="#"><i class="fa-solid fa-cart-shopping " style="font-size: 30px;"></i>Proximamente Carro</a><!-- Carro de compras -->
         </div>
         <div class="me-2"></div>                
       </div>
@@ -102,82 +102,89 @@
 <main>
         <!--cards de productos mas vendidos-->
         <div class="container mt-5 py-5">
-          <h1 class="text-center">SH.Figuarts</h1>
+          <h1 class="text-center">SH-Figuarts</h1>
   
           <div class="row row-cols-2 row-cols-md-3 row-cols-lg-5 g-4 py-5">
-            
-            <!--Items-->
-            <div class="col">
+
+            <!--Items/Producto Goku-SH (oferta/Preventa)-->
+            <div class="item">
               <div class="card h-100">
-                <img src="IMG/mafex-no-spider-man-spider-man-2099-comic-ver-medicom-toy-.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title"> MAFEX (No. 239): Spider-Man - Spider-Man 2099 (Comic Ver.) [Medicom Toy]</h5>
-                </div>
-                <div class="d-flex justify-content-around mb-2">
-                  <h3 class="text-primary">$74,990</h3>
-                </div>
-                <div class="d-flex justify-content-center mb-2">
-                  <button class="btn btn-success">Reserva aquí</button>
-                </div>
+                <div class="imagen-content">
+                  <a href="#"><!--Link para la platilla de vista producto-->     
+                    <span class="discount">-20%</span> <span class="estado preventa">PRE-VENTA</span><!--etiquetas de cards (ESTADO STOCK/PREVENTA/OUT OF STOCK) quitae dicount si  no hay descuento-->       
+                    <img src="img-producto/shf-goku/shfiguarts-ssj-son-goku-the-legendary-super-saiyan-dragon-ball-z-action-figure-reissue.jpg" class="card-img-top" alt="..."> <!--imagen del producto-->
+                  </a>  
+                </div>  
+                  <div class="card-body">
+                      <h5 class="card-title"> S.H.Figuarts -SUPER SAIYAN SON GOKU -LEGENDARY SUPER SAIYAN</h5><!--nombre del producto-->
+                  </div>
+                  <div class="d-flex justify-content-around mb-2 precio">
+                    <h3 class="text-danger">$51,990 
+                      <span class="text-primary  precio-original" style="text-decoration: line-through; font-size:medium;">$64,990</span></h3><!--Precio original/final-->
+                  </div>
+                  <div class="d-flex justify-content-center mb-2">
+                    <a href="#"><!--Link para la platilla de vista producto--> 
+                      <button class="btn btn-success">Reserva aquí</button><!--boton de compra-->
+                    </a>  
+                  </div>
               </div>
             </div>
-            
-            <div class="col">
+            <!--Fin de Item/Producto-->
+
+            <!--Items/Producto Naruto-SH (oferta/Preventa)-->
+            <div class="item">
               <div class="card h-100">
-                <img src="IMG/bring-arts-final-fantasy-xvi-clive-rosfield-square-enix-.jpg" class="card-img-top" alt="...">
-                <div class="card-body pb-1">
-                  <h5 class="card-title"> MAFEX (No. 239): Spider-Man - Spider-Man 2099 (Comic Ver.) [Medicom Toy]</h5>
-                </div>
-                <div class="d-flex justify-content-around mb-2">
-                  <h3 class="text-primary">$74,990</h3>
-                </div>
-                <div class="d-flex justify-content-center mb-2">
-                  <button class="btn btn-success">Reserva aquí</button>
-                </div>
+                <div class="imagen-content">
+                  <a href="#"><!--Link para la platilla de vista producto-->     
+                    <span class="discount">-20%</span> <span class="estado preventa">PRE-VENTA</span><!--etiquetas de cards (ESTADO STOCK/PREVENTA/OUT OF STOCK) quitae dicount si  no hay descuento-->       
+                    <img src="img-producto/shf-naruto-sabio/shfiguarts-naruto-uzumaki-sage-mode-savior-of-konoha-naruto-shippuden-action-figure.jpg" class="card-img-top" alt="..."> <!--imagen del producto-->
+                  </a>  
+                </div>  
+                  <div class="card-body">
+                      <h5 class="card-title"> S.H.Figuarts NARUTO UZUMAKI [Sage Mode] - The Savior of Konoha who inherits the will of his master</h5><!--nombre del producto-->
+                  </div>
+                  <div class="d-flex justify-content-around mb-2 precio">
+                    <h3 class="text-danger">$67,990 
+                      <span class="text-primary  precio-original" style="text-decoration: line-through; font-size:medium;">$84,990</span></h3><!--Precio original/final-->
+                  </div>
+                  <div class="d-flex justify-content-center mb-2">
+                    <a href="#"><!--Link para la platilla de vista producto--> 
+                      <button class="btn btn-success">Reserva aquí</button><!--boton de compra-->
+                    </a>  
+                  </div>
               </div>
-            </div> 
-  
-            <div class="col">
+            </div>
+            <!--Fin de Item/Producto-->
+
+            <!--Items/Producto Itachi-SH (oferta/Preventa)-->
+            <div class="item">
               <div class="card h-100">
-                <img src="IMG/figma-626-the-legend-of-zelda-tears-of-the-kingdom-link-tears-of-the-kingdom-ver-max-factory-.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title"> MAFEX (No. 239): Spider-Man - Spider-Man 2099 (Comic Ver.) [Medicom Toy]</h5>
-                </div>
-                <div class="d-flex justify-content-center mb-2">
-                  <h3 class="text-primary">$74,990</h3>
-                </div>
-                <div class="d-flex justify-content-center mb-2">
-                  <button class="btn btn-success">Reserva aquí</button>
-                </div>
+                <div class="imagen-content">
+                  <a href="#"><!--Link para la platilla de vista producto-->     
+                    <span class="discount">-20%</span> <span class="estado preventa">PRE-VENTA</span><!--etiquetas de cards (ESTADO STOCK/PREVENTA/OUT OF STOCK) quitae dicount si  no hay descuento-->       
+                    <img src="img-producto/shf-itachi/shfiguarts-itachi-uchiha-narutop99-edition-naruto-shippuuden-action-figure.jpg" class="card-img-top" alt="..."> <!--imagen del producto-->
+                  </a>  
+                </div>  
+                  <div class="card-body">
+                      <h5 class="card-title"> S.H.FIGUARTS: Naruto Shippuuden - Uchiha Itachi (NARUTOP99 Edition Ver.) [Bandai Spirits]</h5><!--nombre del producto-->
+                  </div>
+                  <div class="d-flex justify-content-around mb-2 precio">
+                    <h3 class="text-danger">$63,990 
+                      <span class="text-primary  precio-original" style="text-decoration: line-through; font-size:medium;">$79,990</span></h3><!--Precio original/final-->
+                  </div>
+                  <div class="d-flex justify-content-center mb-2">
+                    <a href="#"><!--Link para la platilla de vista producto--> 
+                      <button class="btn btn-success">Reserva aquí</button><!--boton de compra-->
+                    </a>  
+                  </div>
               </div>
-            </div> 
-  
-  
+            </div>
+            <!--Fin de Item/Producto-->
   
           </div>
         </div>
         <!--final de cards-->
 
-                    <!--Inicio de Item/Card-->
-                    <div class="item">
-                      <div class="card h-100">
-                        <div class="imagen-content">
-                          <span class="discount">-16%</span> <span class="estado">PRE-VENTA</span><!--etiquetas de cards-->
-                          <img src="IMG/mafex-no-spider-man-spider-man-2099-comic-ver-medicom-toy-.jpg" class="card-img-top" alt="..."> <!--imagen del producto-->
-                        </div>  
-                          <div class="card-body">
-                            <h5 class="card-title"> MAFEX (No. 239): Spider-Man - Spider-Man 2099 (Comic Ver.) [Medicom Toy]</h5><!--nombre del producto-->
-                          </div>
-                          <div class="d-flex justify-content-around mb-2 precio">
-                            <h3 class="text-danger">$74,990 
-                              <span class="text-primary  precio-original" style="text-decoration: line-through; font-size:medium;">$89,990</span></h3><!--Precio-->
-                          </div>
-                          <div class="d-flex justify-content-center mb-2">
-                            <button class="btn btn-success addToCartBtn" data-name="MAFEX (No. 239): Spider-Man 2099 (Comic Ver.)" data-price="74990">Reserva aquí</button><!--boton de compra-->
-                          </div>
-                      </div>
-                    </div>
-                    <!--Fin de Item/Card-->
 </main>
 <!--Main de productos-->
 
@@ -243,13 +250,13 @@
                 Productos
               </h6>
               <p>
-                <a href="#!" class="text-reset">Stock</a>
+                <a href="stock.html" class="text-reset">Stock</a>
               </p>
               <p>
-                <a href="#!" class="text-reset">Perventas</a>
+                <a href="preventas.html" class="text-reset">Perventas</a>
               </p>
               <p>
-                <a href="#!" class="text-reset">Ofertas</a>
+                <a href="ofertas.html" class="text-reset">Ofertas</a>
               </p>
             </div>
             <!-- Grid column -->

@@ -74,8 +74,8 @@
 /*Descuento de producto*/
 .imagen-content .discount{
     position: absolute;
-    left: 0;
     background-color: crimson;
+    left: 0;
     color: #fff;
     padding: 2px 1.2rem;
     border-radius: 0px 16px 16px 0px;
@@ -84,16 +84,29 @@
 }
 
 
+
+
 /*Estado del producto (preventa/stock/out of stock)*/
 .imagen-content .estado{
     position: absolute;
     right: 0;
-    background-color:cornflowerblue;
     color: #fff;
     padding: 2px 1.2rem;
     border-radius:  16px 0px 0px 16px;
     font-size: 14px;
     margin: 75% 0px 0px 0px;
+}
+
+.imagen-content .preventa{
+    background-color:cornflowerblue;
+}
+
+.imagen-content .stock{
+    background-color: green;
+}
+
+.imagen-content .out-of-stock{
+    background-color: crimson;
 }
 
 /* Estilos para dispositivos móviles y tabletas */
