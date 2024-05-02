@@ -1,105 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--Script fontawesome-->
-    <script src="https://kit.fontawesome.com/87116d5df4.js" crossorigin="anonymous"></script>
+<?php
+$titulo = "Inicio | FiguShop";
+?>
 
-    <!--Script index.JS-->
-    <script src="./js/productos.js"></script>
-    <script src="./js/index.js" defer></script>
-    <!--LINK CSS-->
-    <link rel="stylesheet" href="css/hola.css">
-
-    <link rel="icon" href="IMG/logo-robot.png">
-
-    <!--LINK Bootstrap-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" 
-    rel="stylesheet" 
-    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" 
-    crossorigin="anonymous">
-    
-    <!--LINK OwlCarousel-->
-    <link rel="stylesheet" 
-    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" 
-    integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" 
-    crossorigin="anonymous" 
-    referrerpolicy="no-referrer" />
-
-    <link rel="stylesheet" 
-    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" 
-    integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" 
-    crossorigin="anonymous" 
-    referrerpolicy="no-referrer" />
-
-
-    <title>Inicio | FiguShop</title>
-</head>
-<body>
-
-<!--Aqui Inicia La Navbar!!!-->
-          <nav class="navbar sticky-top navbar-expand-lg bg-body-tertiary p-3">
-          <!--logo:FiguShop-->
-            <div class="container-fluid">
-              <a class="navbar-brand" href="inicio.html"><img src="IMG/logo.png" width="250px" alt="Logo"></a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <!--Contenido de navbar 
-                  "categorias, Marcas, Ofertas, Stock, etc..."-->
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                  <li class="nav-item dropdown"><!--categorias-->
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      Categorias
-                    </a>
-                    <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="series-peliculas.html">Series/Peliculas</a></li>
-                      <li><hr class="dropdown-divider"></li>
-                      <li><a class="dropdown-item" href="videojuegos.html">Video Juegos</a></li>
-                      <li><hr class="dropdown-divider"></li>
-                      <li><a class="dropdown-item" href="anime.html">Anime</a></li>
-                    </ul>
-                  </li>
-                  <li class="nav-item dropdown"><!--marcas-->
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      Marcas
-                    </a>
-                    <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="shf.html">Sh figuarts</a></li>
-                      <li><a class="dropdown-item" href="mafex.html">Mafex</a></li>
-                      <li><a class="dropdown-item" href="figma.html">Figma</a></li>
-                      <li><a class="dropdown-item" href="ml.html">Marvel legends</a></li>
-                      <li><a class="dropdown-item" href="revoltech.html">Revoltech</a></li>
-                    </ul>
-                  </li>
-                  <li class="nav-item"><!--Ofertas-->
-                    <a class="nav-link" href="ofertas.html">Ofertas</a>
-                  </li>
-                  <li class="nav-item"><!--Preventas-->
-                    <a class="nav-link" href="preventas.html">Preventas</a>
-                  </li>
-                  <li class="nav-item"><!--Stock-->
-                    <a class="nav-link" href="stock.html">Stock</a>
-                  </li>
-                </ul>
-                <!--Barra de busqueda!!!-->
-                <form class="d-flex justify-content-center " role="search">
-                  <input class="form-control me-2 rounded-pill flex-grow-5" type="search" placeholder="Busqueda de catalogo" aria-label="Search">
-                  <button class="btn btn-outline-primary" type="submit">Buscar</button>
-                </form>
-                <div class="me-5"></div>
-                <div class="d-flex justify-content-end my-3 py-2">
-                  <a class="mr-3 link-offset-2 link-underline link-underline-opacity-0" href="registro.html"><i class="fa-solid fa-user" style="font-size: 30px;"></i> inicio de sesión</a><!-- Usuario -->
-                  <div class="me-4"></div> <!-- Espacio en blanco -->
-                  <a id="cart-link" class="link-offset-2 link-underline link-underline-opacity-0" href="#"><i class="fa-solid fa-cart-shopping " style="font-size: 30px;"></i>Proximamente Carro</a><!-- Carro de compras -->
-                </div>
-                <div class="me-2"></div>                
-              </div>
-            </div>
-          </nav>
-<!--Aqui Termina la Navbar!!!-->
+<?php require('./layout/navbar.php') ?>
 
     <!--Aqui empieza el main-->
     <main>
@@ -109,6 +12,9 @@
           <button type="button" data-bs-target="#carouselExampleInterval" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
           <button type="button" data-bs-target="#carouselExampleInterval" data-bs-slide-to="1" aria-label="Slide 2"></button>
           <button type="button" data-bs-target="#carouselExampleInterval" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          <button type="button" data-bs-target="#carouselExampleInterval" data-bs-slide-to="3" aria-label="Slide 4"></button>
+          <button type="button" data-bs-target="#carouselExampleInterval" data-bs-slide-to="4" aria-label="Slide 5"></button>
+          <button type="button" data-bs-target="#carouselExampleInterval" data-bs-slide-to="5" aria-label="Slide 6"></button>
         </div>
         <div class="carousel-inner">
           <div class="carousel-item active" data-bs-interval="5000"><!--imagenes y tiempo de el carrusel-->
@@ -118,7 +24,16 @@
             <img src="IMG/figma_Link_Tears_of_the_Kingdom.jpg" class="d-block w-100" alt="Link_figma">
           </div>
           <div class="carousel-item">
+            <img src="IMG/MAFEX_Friendly_Neighborhood_Spider_Man_Template_1232x240_PC.jpg" class="d-block w-100" alt="Spider-man">
+          </div>
+          <div class="carousel-item">
             <img src="IMG/MAFEX_Spider_Man_2099.jpg" class="d-block w-100" alt="Spider-man_2099">
+          </div>
+          <div class="carousel-item">
+            <img src="IMG/Revoltech_Izuku_and_Ochaco_1232x240_PC.jpg" class="d-block w-100" alt="Deku_Ochako">
+          </div>
+          <div class="carousel-item">
+            <img src="IMG/Final_Fantasy_VII.jpg" class="d-block w-100" alt="FF_VII">
           </div>
         </div>
         <!--botones de la parte izquierda y derecha del carrusel-->
@@ -144,7 +59,7 @@
              <div class="item">
                <div class="card border border-0">
                  <div class="card-body">
-                  <a href="marvel.html">
+                  <a href="marvel.php">
                     <img src="IMG/logomarvel.png" alt="Marvel" class="card-img-top" width="150px">
                   </a> 
                  </div>
@@ -155,7 +70,7 @@
              <div class="item">
               <div class="card border border-0">
                 <div class="card-body">
-                  <a href="dbz.html">
+                  <a href="dbz.php">
                     <img src="IMG/logodbz.png" alt="" class="card-img-top" width="150px">
                   </a>
                 </div>
@@ -166,7 +81,7 @@
             <div class="item">
               <div class="card border border-0">
                 <div class="card-body">
-                  <a href="dc.html">
+                  <a href="dc.php">
                     <img src="IMG/logodccomics.png" alt="" class="card-img-top" width="150px">
                   </a>
                 </div>
@@ -177,7 +92,7 @@
             <div class="item">
               <div class="card border border-0">
                 <div class="card-body">
-                  <a href="naruto.html">
+                  <a href="naruto.php">
                     <img src="IMG/narutologo.png" alt="" class="card-img-top" width="150px">
                   </a>
                 </div>
@@ -291,7 +206,7 @@
             <div class="item">
               <div class="card h-100">
                 <div class="imagen-content">
-                  <a href="vista-link.html"><!--Link para la platilla de vista producto-->     
+                  <a href="vista-link.php"><!--Link para la platilla de vista producto-->     
                     <span class="discount">-18%</span> <span class="estado preventa">PRE-VENTA</span><!--etiquetas de cards (ESTADO STOCK/PREVENTA/OUT OF STOCK) quitae dicount si  no hay descuento-->       
                     <img src="img-producto/figma-link/figma-626-link-tears-of-the-kingdom.jpg" class="card-img-top" alt="..."> <!--imagen del producto-->
                   </a>  
@@ -304,7 +219,7 @@
                       <span class="text-primary  precio-original" style="text-decoration: line-through; font-size:medium;">$69,990</span></h3><!--Precio original/final-->
                   </div>
                   <div class="d-flex justify-content-center mb-2">
-                    <a href="vista-link.html"><!--Link para la platilla de vista producto--> 
+                    <a href="vista-link.php"><!--Link para la platilla de vista producto--> 
                       <button class="btn btn-success">Reserva aquí</button><!--boton de compra-->
                     </a>  
                   </div>
@@ -599,7 +514,7 @@
         <div class="row">
           <div class="col-lg-4 mb-4 order-lg-2">
             <div class="bg-light p-3 text-center img-container">
-              <a href="videojuegos.html">
+              <a href="videojuegos.php">
                 <span class="tipo-categoria">VideoJuegos <i class="fa-solid fa-arrow-right"></i></span>
                 <img src="IMG/mario.jpg" alt="" class="card-img-top img-fluid">
               </a>
@@ -607,7 +522,7 @@
           </div>
           <div class="col-lg-4 col-md-6 mb-4 order-1 order-lg-2">
             <div class="bg-light p-3 text-center img-container">
-              <a href="anime.html">
+              <a href="anime.php">
                 <span class="tipo-categoria">Anime <i class="fa-solid fa-arrow-right"></i></span>
                 <img src="IMG/840_560.jpeg" alt="" class="card-img-top img-fluid">
               </a>
@@ -615,7 +530,7 @@
           </div>
           <div class="col-lg-4 col-md-6 mb-4 order-1 order-lg-2">
             <div class="bg-light p-3 text-center img-container">
-              <a href="series-peliculas.html">
+              <a href="series-peliculas.php">
                 <span class="tipo-categoria">Series/Peliculas <i class="fa-solid fa-arrow-right"></i></span>
                 <img src="IMG/pexels-tima-miroshnichenko-5662857.jpg" alt="" class="card-img-top img-fluid">
               </a>
@@ -660,7 +575,7 @@
             <div class="item">
               <div class="card h-100">
                 <div class="imagen-content">
-                  <a href="vista-link.html"><!--Link para la platilla de vista producto-->     
+                  <a href="vista-link.php"><!--Link para la platilla de vista producto-->     
                     <span class="discount">-18%</span> <span class="estado preventa">PRE-VENTA</span><!--etiquetas de cards (ESTADO STOCK/PREVENTA/OUT OF STOCK) quitae dicount si  no hay descuento-->       
                     <img src="img-producto/figma-link/figma-626-link-tears-of-the-kingdom.jpg" class="card-img-top" alt="..."> <!--imagen del producto-->
                   </a>  
@@ -673,7 +588,7 @@
                       <span class="text-primary  precio-original" style="text-decoration: line-through; font-size:medium;">$69,990</span></h3><!--Precio original/final-->
                   </div>
                   <div class="d-flex justify-content-center mb-2">
-                    <a href="vista-link.html"><!--Link para la platilla de vista producto--> 
+                    <a href="vista-link.php"><!--Link para la platilla de vista producto--> 
                       <button class="btn btn-success">Reserva aquí</button><!--boton de compra-->
                     </a>  
                   </div>
@@ -790,138 +705,8 @@
       </div>  
     </main>
 
-
-    <!-- Footer -->
-<footer class="text-center text-lg-start bg-body-tertiary text-muted mt-5">
-  <!-- Section: Social media -->
-  <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
-    <!-- Left -->
-    <div class="me-5 d-none d-lg-block">
-      <span>Conéctate con nosotros en nuestras redes sociales:</span>
-    </div>
-    <!-- Left -->
-
-    <!-- Right -->
-    <div>
-      <a href="" class="me-4 text-reset">
-        <i class="fab fa-facebook-f"></i>
-      </a>
-      <a href="" class="me-4 text-reset">
-        <i class="fab fa-twitter"></i>
-      </a>
-      <a href="" class="me-4 text-reset">
-        <i class="fab fa-google"></i>
-      </a>
-      <a href="" class="me-4 text-reset">
-        <i class="fab fa-instagram"></i>
-      </a>
-      <a href="" class="me-4 text-reset">
-        <i class="fab fa-linkedin"></i>
-      </a>
-      <a href="" class="me-4 text-reset">
-        <i class="fab fa-github"></i>
-      </a>
-    </div>
-    <!-- Right -->
-  </section>
-  <!-- Section: Social media -->
-
-  <!-- Section: Links  -->
-  <section class="">
-    <div class="container text-center text-md-start mt-5">
-      <!-- Grid row -->
-      <div class="row mt-3">
-        <!-- Grid column -->
-        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-          <!-- Content -->
-          <h6 class="text-uppercase fw-bold mb-4">
-            <a href="inicio.html"><img src="IMG/logo.png" alt="logo" width="150px"></a>
-          </h6>
-          <p>
-            Encuentra tus figuras de colección favoritas en nuestra
-             tienda en línea, donde ofrecemos una amplia selección 
-             que incluye desde personajes del anime hasta legendarios 
-             íconos del cine y la cultura pop.
-          </p>
-        </div>
-        <!-- Grid column -->
-
-        <!-- Grid column -->
-        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-          <!-- Links -->
-          <h6 class="text-uppercase fw-bold mb-4">
-            Productos en:
-          </h6>
-          <p>
-            <a href="#!" class="text-reset">Stock</a>
-          </p>
-          <p>
-            <a href="#!" class="text-reset">Preventas</a>
-          </p>
-          <p>
-            <a href="#!" class="text-reset">Ofertas</a>
-          </p>
-        </div>
-        <!-- Grid column -->
-
-        <!-- Grid column -->
-        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-          <!-- Links -->
-          <h6 class="text-uppercase fw-bold mb-4">
-            Informacion (proximamente)
-          </h6>
-          <p>
-            <a href="#!" class="text-reset">Pagos</a>
-          </p>
-          <p>
-            <a href="#!" class="text-reset">Envios</a>
-          </p>
-          <p>
-            <a href="#!" class="text-reset">Preventas</a>
-          </p>
-          <p>
-            <a href="#!" class="text-reset">Preguntas frecuentes</a>
-          </p>
-        </div>
-        <!-- Grid column -->
-
-        <!-- Grid column -->
-        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-          <!-- Links -->
-          <h6 class="text-uppercase fw-bold mb-4">Contacto</h6>
-          <p><i class="fas fa-home me-3"></i> Santiago, Renca, CL</p>
-          <p>
-            <i class="fas fa-envelope me-3"></i>
-            marc.tapiap@duocuc.cl
-          </p>
-          <p><i class="fas fa-phone me-3"></i> +569 5555 4444</p>
-        </div>
-        <!-- Grid column -->
-      </div>
-      <!-- Grid row -->
-    </div>
-  </section>
-  <!-- Section: Links  -->
-
-  <!-- Copyright -->
-  <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
-    © 2024 Copyright:
-    <a class="text-reset fw-bold" href="">Marcos Tapia</a>
-  </div>
-  <!-- Copyright -->
-</footer>
-<!-- Footer -->
-
-<div id="cart" style="display: none;">
-  <ul id="cart-items"></ul>
-  <div id="cart-total"></div>
-  <button onclick="clearCart()">Limpiar Carro</button>
-</div>
-
-    <!--Bootstrap JavaScript!!!-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" 
-    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" 
-    crossorigin="anonymous"></script>
+<!--FOOTER.php-->
+<?php require('./layout/footer.php') ?>
 
     <!--JQUERY CDN LINK.
       IMPORTANTE INTEGRITY QUE HACE QUE NO FUNCIONE EL OWLCAROUSEL:
@@ -944,7 +729,7 @@
     nav:false,
     autoplay:true,
     autoplayTimeout:2750,
-    autoplayHoverPause:false,
+    autoplayHoverPause:true,
     responsive:{
         0:{
             items:2

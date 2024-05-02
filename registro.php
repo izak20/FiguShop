@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="IMG/logo-robot.png">
     <title>Formulario de Registro</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -11,10 +12,26 @@
             color: red;
         }
     </style>
+    <style>
+        /* Media query para dispositivos móviles */
+        @media (max-width: 768px) {
+            h2 {
+                font-size: 24px;    /* Tamaño de fuente más pequeño para dispositivos móviles */
+                margin-top: 15px;   /* Espacio superior reducido */
+                margin-bottom: 15px;/* Espacio inferior reducido */
+            }
+        }
+        /* Estilos para la imagen dentro del contenedor */
+        .container img {
+            max-width: 100%; /* Establece el ancho máximo de la imagen al 100% del contenedor */
+            height: auto;    /* La altura se ajustará automáticamente para mantener la proporción */
+            display: block;  /* Elimina cualquier espacio adicional alrededor de la imagen */
+        }
+    </style>
 </head>
 <body>
     <div class="container d-flex justify-content-center mt-5">
-        <a href="inicio.html">
+        <a href="inicio.php">
           <img src="IMG/logo.png" alt="">
         </a>  
     </div>
@@ -128,7 +145,7 @@
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-                                <a href="inicio.html" class="btn btn-primary">Ir al inicio</a>
+                                <a href="inicio.php" class="btn btn-primary">Ir al inicio</a>
                             </div>
                         </div>
                     </div>
