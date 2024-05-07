@@ -123,7 +123,7 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-6">
-          <div class="owl-carousel owl-theme owl-thumb">
+          <div class="owl-carousel owl-theme owl-thumb border rounded-3 ">
             <div class="item"><img src="img-producto/figma-link/figma-626-link-tears-of-the-kingdom.jpg" alt="Imagen 1"></div>
             <div class="item"><img src="img-producto/figma-link/figma-626-link-tears-of-the-kingdom (1).jpg" alt="Imagen 2"></div>
             <div class="item"><img src="img-producto/figma-link/figma-626-link-tears-of-the-kingdom (3).jpg" alt="Imagen 3"></div>
@@ -137,10 +137,10 @@
           </div>
         </div>
         <div class="col-lg-6">
-          <h1>Figma 626: The Legend of Zelda: Tears of the Kingdom - Link (Tears of the Kingdom Ver.) [Max Factory]</h1>
+          <h1>Figma 626: The Legend of Zelda: Tears of the Kingdom - Link (Tears of the Kingdom Ver.) [Max Factory]</h1> <hr>
           <p>Descripción breve del producto.</p>
-          <p>Precio: <h3 class="text-danger">$56,990 
-            <span class="text-primary  precio-original" style="text-decoration: line-through; font-size:medium;">$69,990</span></h3></p>
+          <p>Precio: <h2 class="text-danger">$56,990 
+            <span class="text-primary  precio-original" style="text-decoration: line-through; font-size:medium;">$69,990</span></h2></p>
           <button class="btn btn-primary">Comprar</button>
         </div>
       </div>
