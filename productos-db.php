@@ -30,7 +30,8 @@ $titulo = "Todos los productos | FiguShop";
                 ?>
 
                 <div class="imagen-content">
-                  <a href="#"><!--Link para la platilla de vista producto--> 
+                  <a href="vista-producto.php?id=<?php echo $row['id_producto']; 
+                    ?>&token=<?php echo hash_hmac('sha1', $row['id_producto'], KEY_TOKEN); ?>"><!--Link para la platilla de vista producto--> 
                   
                   <!--Variable de descuento-->    
                     <?php $descuento = $row['descuento'];
@@ -48,7 +49,7 @@ $titulo = "Todos los productos | FiguShop";
                         <?php
                     echo $row['id_estado'] == 1 ? 'PRE-VENTA':
                         ($row['id_estado'] == 2 ? 'STOCK' :
-                        ($row['id_estado'] == 3 ? 'OUT-OF-STOCK' : '')); 
+                        ($row['id_estado'] == 3 ? 'OUT OF STOCK' : '')); 
                         ?>
                         </span>
                                                 
@@ -89,7 +90,8 @@ $titulo = "Todos los productos | FiguShop";
 
                   </div>
                   <div class="d-flex justify-content-center mb-2">
-                    <a href="#"><!--Link para la platilla de vista producto--> 
+                    <a href="vista-producto.php?id=<?php echo $row['id_producto']; 
+                    ?>&token=<?php echo hash_hmac('sha1', $row['id_producto'], KEY_TOKEN); ?>"><!--Link para la platilla de vista producto--> 
                       <button class="btn btn-success"> <?php 
                       echo $row['id_estado'] == 1 ? 'Reserva Aquí':
                         ($row['id_estado'] == 2 ? 'Compra Aquí' :
