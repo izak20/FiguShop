@@ -70,7 +70,6 @@
 }
 
 
-
 /*Descuento de producto*/
 .imagen-content .discount{
     position: absolute;
@@ -83,7 +82,35 @@
     margin: 5% 0px 0px 0px;
 }
 
+/* Estilos para el descuento */
+.precio .discount {
+    position: relative;
+    background-color: crimson;
+    color: #fff;
+    padding: 2px 1.2rem;
+    border-radius: 16px;
+}
 
+/* Estilos para el estado del producto */
+.precio .estado {
+    position: relative;
+    color: #fff;
+    padding: 2px 1.2rem;
+    border-radius: 16px;
+}
+
+/* Estilos específicos según el estado del producto */
+.precio .preventa {
+    background-color: cornflowerblue;
+}
+
+.precio .stock {
+    background-color: green;
+}
+
+.precio .out-of-stock {
+    background-color: crimson;
+}
 
 
 /*Estado del producto (preventa/stock/out of stock)*/
@@ -182,5 +209,29 @@
 .precio-original span{
     text-decoration: line-through;
 }
+
+.container .grid-img {  display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50% 50% 50% 50%;
+    grid-auto-columns: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "img1 img1"
+      "img1 img1"
+      "img2 img3"
+      "img4 img5";
+  }
+  
+  .img1 { grid-area: img1; }
+  
+  .img2 { grid-area: img2; }
+  
+  .img3 { grid-area: img3; }
+  
+  .img4 { grid-area: img4; }
+  
+  .img5 { grid-area: img5; }
+  
 
 

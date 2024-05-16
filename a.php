@@ -5,8 +5,9 @@ $db = new Database();
 $con = $db->conectar();
 
 // ID de la franquicia, marca y categoría que deseas filtrar
-$id_franquicia = 2; // Por ejemplo, filtrar por franquicia con ID 1
-
+$id_franquicia = 1; // Por ejemplo, filtrar por franquicia con ID 1
+$id_marca = 0;       // Filtrar por marca con ID 1
+$id_categoria = 0;   // Filtrar por categoría con ID 2
 
 $sql = $con->prepare("SELECT 
     p.id_producto,
@@ -32,10 +33,13 @@ LEFT JOIN
     categorias c ON p.id_categoria = c.id_categoria
 WHERE 
     p.id_franquicia = :id_franquicia
+    AND p.id_marca = :id_marca
+    AND p.id_categoria = :id_categoria
 ");
 
 $sql->bindParam(':id_franquicia', $id_franquicia, PDO::PARAM_INT);
-
+$sql->bindParam(':id_marca', $id_marca, PDO::PARAM_INT);
+$sql->bindParam(':id_categoria', $id_categoria, PDO::PARAM_INT);
 
 $sql->execute();
 $resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
@@ -44,7 +48,7 @@ $resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
 
 <!--cambio de titulo-->
 <?php
-$titulo = "DC Comics | FiguShop";
+$titulo = "Todos los productos | FiguShop";
 ?>
 <!--Navbar.php-->
 <?php require('./layout/navbar.php') ?>
@@ -57,7 +61,7 @@ $titulo = "DC Comics | FiguShop";
 
         <!--cards de productos mas vendidos-->
         <div class="container mt-5 py-5">
-          <h1 class="text-center">DC Comics</h1>  
+          <h1 class="text-center">Anime</h1>  
           <div class="row row-cols-2 row-cols-md-3 row-cols-lg-5 g-4 py-5">
 
           <!--Imagen principal del producto-->

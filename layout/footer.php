@@ -69,7 +69,7 @@
                         <a href="ofertas.php" class="text-reset">Ofertas</a>
                     </p>
                     <p>
-                        <a href="productos.php" class="text-reset">Todos los Productos</a>
+                        <a href="productos-db.php" class="text-reset">Todos los Productos</a>
                     </p>
 
                 </div>
