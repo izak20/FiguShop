@@ -39,12 +39,12 @@ $titulo = "Inicio | FiguShop";
         </a>
       </div>
       <div class="carousel-item">
-        <a href="anime.php"> <!-- Enlace para Deku y Ochako (ID del producto 5) -->
+        <a href="mha.php"> <!-- Enlace para Deku y Ochako (ID del producto 5) -->
           <img src="IMG/Revoltech_Izuku_and_Ochaco_1232x240_PC.jpg" class="d-block w-100" alt="Deku_Ochako">
         </a>
       </div>
       <div class="carousel-item">
-        <a href="videojuegos.php"> <!-- Enlace para Final Fantasy VII (ID del producto 6) -->
+        <a href="vista-producto.php?id=23&token=<?php echo hash_hmac('sha1', 23, KEY_TOKEN); ?>"> <!-- Enlace para Final Fantasy VII (ID del producto 6) -->
           <img src="IMG/Final_Fantasy_VII.jpg" class="d-block w-100" alt="FF_VII">
         </a>
       </div>
@@ -118,6 +118,17 @@ $titulo = "Inicio | FiguShop";
             <div class="card-body">
               <a href="persona.php">
                 <img src="IMG/persona-logo.png" alt="" class="card-img-top pt-3 mt-5" width="150px">
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!--item mha-->
+        <div class="item">
+          <div class="card border border-0">
+            <div class="card-body">
+              <a href="mha.php">
+                <img src="IMG/mha.png" alt="" class="card-img-top  mt-5" width="150px">
               </a>
             </div>
           </div>
@@ -429,16 +440,17 @@ $titulo = "Inicio | FiguShop";
                   /* Establece el ancho personalizado para los botones */
                   .custom-btn {
                     width: 150px;
-                    /* Cambia el valor según sea necesario */
+                    /* Cambiar el valor según sea necesario */
                   }
                 </style>
 
                 <div class="d-flex justify-content-center mb-2">
                   <?php if ($row['id_estado'] != 3) : ?>
                     <!-- El producto está disponible para agregar al carrito -->
-                    <button class="btn btn-primary mt-3" type="button" onclick="addProductToCart(<?php echo $row['id_producto']; ?>, '<?php echo hash_hmac('sha1', $row['id_producto'], KEY_TOKEN); ?>')">
+                    <button class="btn btn-primary mt-3" type="button" onclick="addProductToCart(<?php echo $row['id_producto']; ?>, '<?php echo hash_hmac('sha1', $row['id_producto'], 'APR.wqc-354*'); ?>')">
                       Agregar al carrito
                     </button>
+
                   <?php else : ?>
                     <!-- El producto está fuera de stock -->
                     <a href="vista-producto.php?id=<?php echo $row['id_producto']; ?>&token=<?php echo hash_hmac('sha1', $row['id_producto'], KEY_TOKEN); ?>" class="btn btn-primary custom-btn mt-3">Detalles</a>
@@ -515,6 +527,8 @@ $titulo = "Inicio | FiguShop";
       });
   }
 </script>
+
+
 </body>
 
 </html>

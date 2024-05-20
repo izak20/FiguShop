@@ -25,7 +25,7 @@
             <a href="#" class="me-4 text-reset">
                 <i class="fab fa-linkedin"></i>
             </a>
-            <a href="#" class="me-4 text-reset">
+            <a href="https://github.com/izak20/FiguShop" class="me-4 text-reset">
                 <i class="fab fa-github"></i>
             </a>
         </div>
@@ -76,24 +76,6 @@
                 <!-- Grid column -->
 
                 <!-- Grid column -->
-                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-                    <!-- Links -->
-                    <h6 class="text-uppercase fw-bold mb-4">
-                        Informacion (proximamente)
-                    </h6>
-                    <p>
-                        <a href="#!" class="text-reset">Pagos</a>
-                    </p>
-                    <p>
-                        <a href="#!" class="text-reset">Envios</a>
-                    </p>
-                    <p>
-                        <a href="#!" class="text-reset">Preventas</a>
-                    </p>
-                    <p>
-                        <a href="#!" class="text-reset">Preguntas frecuentes</a>
-                    </p>
-                </div>
                 <!-- Grid column -->
 
                 <!-- Grid column -->

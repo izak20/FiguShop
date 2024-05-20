@@ -1,4 +1,6 @@
-<?php require_once __DIR__ . '/../config/config.php';; ?>
+<?php require_once __DIR__ . '/../config/config.php'; ?>
+
+<?php $icons = ''?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -25,6 +27,9 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
   <title><?php echo isset($titulo) ? $titulo : 'Título Predeterminado'; ?></title>
+
+
+
 </head>
 
 <body>
@@ -37,41 +42,12 @@
       </button>
 
       <a class="navbar-brand me-0" href="inicio.php"><img src="IMG/logo.png" width="250px" alt="Logo"></a>
-      <div class="d-flex justify-content-end my-3 py-2">
-        <a class="mr-3 link-offset-2 link-underline link-underline-opacity-0 icono-invisible" href="registro.php"><i class="fa-solid fa-user" style="font-size: 25px;"></i></a><!-- Usuario -->
-        <div class="me-1"></div> <!-- Espacio en blanco -->
-        <!-- Carro de compras -->
-        <a class="link-offset-2 link-underline link-underline-opacity-0 icono-invisible" href="checkout.php" onclick="addProductToCart(<?php echo $id_producto; ?>, '<?php echo $token; ?>')">
-          <i class="fa-solid fa-cart-shopping" style="font-size: 25px;"></i>
-          <!-- Contador de elementos en el carrito -->
-          <span id="num_cart" class="badge rounded-pill bg-danger">
-            <?php echo $num_cart; ?>
-          </span>
-        </a>
-      </div>
       <style>
         /* Estilos para el logo en modo mobile */
         @media (max-width: 601px) {
           .navbar-brand img {
             max-width: 175px;
             /* Ajusta el tamaño máximo del logo en dispositivos móviles */
-          }
-        }
-
-        .icono-invisible {
-          display: none;
-        }
-
-
-        @media only screen and (max-width: 601px) {
-          .icono-invisible {
-            display: block;
-          }
-        }
-
-        @media only screen and (max-width: 601px) {
-          .icono-visible {
-            display: none;
           }
         }
       </style>
@@ -127,7 +103,7 @@
       </div>
       <div class="d-flex justify-content-end my-3 py-2">
         <a class="mr-3 link-offset-2 link-underline link-underline-opacity-0 icono-visible" href="registro.php"><i class="fa-solid fa-user" style="font-size: 30px;"></i></a><!-- Usuario -->
-        <div class="me-1"></div> <!-- Espacio en blanco -->
+        <div class="me-4"></div> <!-- Espacio en blanco -->
         <!-- Carro de compras -->
         <a class="link-offset-2 link-underline link-underline-opacity-0 icono-visible " href="checkout.php" onclick="addProductToCart(<?php echo $id_producto; ?>, '<?php echo $token; ?>')">
           <i class="fa-solid fa-cart-shopping" style="font-size: 30px;"></i>

@@ -2,12 +2,10 @@
 require '../config/config.php';
 require '../config/database.php';
 
-// Iniciar la sesión si no está iniciada
 if (session_status() == PHP_SESSION_NONE) {
     session_start();
 }
 
-// Verifica la acción y los datos recibidos
 if (isset($_POST['action'])) {
     $action = $_POST['action'];
 
@@ -16,14 +14,11 @@ if (isset($_POST['action'])) {
         $cantidad = isset($_POST['cantidad']) ? intval($_POST['cantidad']) : 0;
 
         if ($id > 0 && $cantidad > 0) {
-            // Actualiza la cantidad en el carrito
             $_SESSION['carrito']['productos'][$id] = $cantidad;
 
-            // Obtén el nuevo subtotal del producto
             $subtotal = calcularSubtotalProducto($id, $cantidad);
 
             if ($subtotal !== false) {
-                // Devuelve la respuesta en formato JSON
                 $response = [
                     'ok' => true,
                     'sub' => '$' . number_format($subtotal, 2, '.', ','),
@@ -69,15 +64,11 @@ if (isset($_POST['action'])) {
     ];
 }
 
-// Devuelve la respuesta en formato JSON
 echo json_encode($response);
 
-// Función para calcular el subtotal de un producto
 function calcularSubtotalProducto($id, $cantidad)
 {
     $subtotal = 0;
-
-    // Realiza la consulta SQL para obtener el precio del producto
     $db = new Database();
     $con = $db->conectar();
     $sql = $con->prepare("SELECT pr.precio, pr.descuento FROM productos p LEFT JOIN precios pr ON p.id_producto = pr.id_producto WHERE p.id_producto = :id");
@@ -89,7 +80,6 @@ function calcularSubtotalProducto($id, $cantidad)
         $precio = $producto['precio'];
         $descuento = $producto['descuento'];
 
-        // Calcula el subtotal aplicando el descuento si corresponde
         $precio_desc = $precio - (($precio * $descuento) / 100);
         $subtotal = $cantidad * $precio_desc;
     }
@@ -97,7 +87,6 @@ function calcularSubtotalProducto($id, $cantidad)
     return $subtotal;
 }
 
-// Función para obtener la cantidad total de productos en el carrito
 function obtenerCantidadTotalProductosEnCarrito()
 {
     $total = 0;

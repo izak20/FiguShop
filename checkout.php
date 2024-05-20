@@ -170,12 +170,10 @@ if ($productos != null) {
                                     <div id="subtotal_<?php echo $producto['id_producto']; ?>" name="subtotal[]">
                                         <?php echo '$' . number_format($producto['subtotal'], 2, '.', ','); ?>
                                     </div>
-                                    <a href="#" id="eliminar" class="btn btn-danger btn-sm mostrar-column " data-bs-id="<?php echo $producto['id_producto']; ?>" data-bs-toggle="modal" data-bs-target="#eliminaModal1"
-                                    onclick="eliminarProducto(<?php echo $producto['id_producto']; ?>)">Eliminar</a>
+                                    <a href="#" id="eliminar" class="btn btn-danger btn-sm mostrar-column " data-bs-id="<?php echo $producto['id_producto']; ?>" data-bs-toggle="modal" data-bs-target="#eliminaModal1" onclick="eliminarProducto(<?php echo $producto['id_producto']; ?>)">Eliminar</a>
                                 </td>
                                 <td class="descuento-column">
-                                    <a href="#" id="eliminar" class="btn btn-danger btn-sm" data-bs-id="<?php echo $producto['id_producto']; ?>" data-bs-toggle="modal" data-bs-target="#eliminaModal"
-                                    onclick="eliminarProducto(<?php echo $producto['id_producto']; ?>)">Eliminar</a>
+                                    <a href="#" id="eliminar" class="btn btn-danger btn-sm" data-bs-id="<?php echo $producto['id_producto']; ?>" data-bs-toggle="modal" data-bs-target="#eliminaModal" onclick="eliminarProducto(<?php echo $producto['id_producto']; ?>)">Eliminar</a>
                                 </td>
                             </tr>
                         <?php endforeach; ?>
@@ -194,11 +192,14 @@ if ($productos != null) {
                 </tbody>
             </table>
         </div>
-        <div class="row mb-5 ">
-            <div class="col-md-5 offset-md-7 d-grip gap-2 d-flex justify-content-end">
-                <button class="btn btn-primary btn-lg ">Realizar pago</button>
+
+        <?php if (!empty($lista_carrito)) : ?>
+            <div class="row mb-5 ">
+                <div class="col-md-5 offset-md-7 d-grip gap-2 d-flex justify-content-end">
+                    <a href="pago.php" class="btn btn-primary btn-lg ">Realizar pago</a>
+                </div>
             </div>
-        </div>
+        <?php endif; ?>
     </div>
 </main>
 
@@ -276,7 +277,7 @@ if ($productos != null) {
                     // Actualiza el elemento HTML del total
                     let totalElement = document.getElementById('total');
                     if (totalElement) {
-                        totalElement.textContent = 'Total: $' + total.toFixed(2); // Asegúrate de formatear correctamente el total
+                        totalElement.textContent = 'Total: $' + total.toFixed(2);
                     }
 
                     // Actualiza el elemento HTML del total para pantallas pequeñas y grandes
@@ -286,6 +287,12 @@ if ($productos != null) {
                     if (totalElementSmall && totalElementLarge) {
                         totalElementSmall.textContent = 'Total: $' + total.toFixed(2);
                         totalElementLarge.textContent = 'Total: $' + total.toFixed(2);
+                    }
+
+                    // Actualiza el contador de elementos en el carrito
+                    let numCartElement = document.getElementById('num_cart');
+                    if (numCartElement) {
+                        numCartElement.textContent = data.numero;
                     }
                 } else {
                     console.error('Error al agregar producto al carrito:', data.error);

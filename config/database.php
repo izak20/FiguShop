@@ -4,8 +4,8 @@ class Database {
     private $hostname = "localhost";
     private $database = "figushop";
     private $username = "root";
-    private $password = ""; // Aquí coloca tu contraseña entre las comillas
-    private $charset = "utf8"; // Definir el conjunto de caracteres
+    private $password = "";
+    private $charset = "utf8"; // Conjunto de caracteres
 
     public function conectar()
     {
