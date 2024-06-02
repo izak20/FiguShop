@@ -1,6 +1,8 @@
 <?php require_once __DIR__ . '/../config/config.php'; ?>
 
-<?php $icons = ''?>
+
+
+<?php $id_carrito = "num_cart";?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -108,7 +110,7 @@
         <a class="link-offset-2 link-underline link-underline-opacity-0 icono-visible " href="checkout.php" onclick="addProductToCart(<?php echo $id_producto; ?>, '<?php echo $token; ?>')">
           <i class="fa-solid fa-cart-shopping" style="font-size: 30px;"></i>
           <!-- Contador de elementos en el carrito -->
-          <span id="num_cart" class="badge rounded-pill bg-danger">
+          <span id="<?php echo $id_carrito?>" class="badge rounded-pill bg-danger">
             <?php echo $num_cart; ?>
           </span>
         </a>
