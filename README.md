@@ -44,7 +44,7 @@ Asegúrate de que Apache y MySQL estén corriendo en XAMPP.
 - Abre el archivo config/database.php.
 - Asegúrate de que los parámetros (nombre de la base de datos, usuario, contraseña) sean correctos.
 - **Ejemplo db:**
-![Página de Pago](IMG/database.png)
+![DataBase](IMG/database.png)
 
 ### 5. Configura la API de PayPal
 - Abre el archivo "config/config.php" y añade tus credenciales de la API de PayPal (en el client_id y el currency de ser necesario).
