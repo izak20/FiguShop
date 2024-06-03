@@ -16,6 +16,8 @@ Este proyecto es una página de ecommerce dedicada a la venta de figuras colecci
 ![Página de Inicio](IMG/home.png)
 - **Página de Productos:**
 ![Página de Productos](IMG/productos.png)
+- **Página de Pago:**
+![Vista de producto](IMG/vistaProducto.png)
 - **Carrito de Compras:**
 ![Carrito de Compras](IMG/carrito.png)
 - **Página de Pago:**
@@ -44,7 +46,7 @@ Asegúrate de que Apache y MySQL estén corriendo en XAMPP.
 - Abre el archivo config/database.php.
 - Asegúrate de que los parámetros (nombre de la base de datos, usuario, contraseña) sean correctos.
 - **Ejemplo db:**
-![Página de Pago](IMG/database.png)
+![DataBase](IMG/database.png)
 
 ### 5. Configura la API de PayPal
 - Abre el archivo "config/config.php" y añade tus credenciales de la API de PayPal (en el client_id y el currency de ser necesario).
