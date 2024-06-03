@@ -16,7 +16,7 @@ Este proyecto es una página de ecommerce dedicada a la venta de figuras colecci
 ![Página de Inicio](IMG/home.png)
 - **Página de Productos:**
 ![Página de Productos](IMG/productos.png)
-- **Página de Pago:**
+- **Vista de Producto:**
 ![Vista de producto](IMG/vistaProducto.png)
 - **Carrito de Compras:**
 ![Carrito de Compras](IMG/carrito.png)
